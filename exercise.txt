@@ -27,3 +27,8 @@ WHERE `date` LIKE '2020-06-20' AND TIMEDIFF(`hour`, '14:00:00') > 0;
 SELECT * 
 FROM `degrees` 
 WHERE `level` LIKE 'magistrale';
+
+/* QUERY 7 */
+SELECT COUNT(*) AS `n_dipartimenti`
+FROM `departments`;
+
