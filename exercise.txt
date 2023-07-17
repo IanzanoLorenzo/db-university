@@ -1,15 +1,29 @@
+/* QUERY 1 */
 SELECT * 
 FROM `students` 
 WHERE `date_of_birth` BETWEEN '1990-01-01' AND '1990-12-31';
 
+/* QUERY 2 */
 SELECT * 
 FROM `courses` 
 WHERE `cfu`> 10;
 
+/* QUERY 3 */
 SELECT * 
 FROM `students` 
 WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURRENT_DATE()) > 30;
 
+/* QUERY 4 */
 SELECT * 
 FROM `courses` 
 WHERE `period` LIKE 'I semestre' AND `year` LIKE 1; 
+
+/* QUERY 5 */
+SELECT * 
+FROM `exams` 
+WHERE `date` LIKE '2020-06-20' AND TIMEDIFF(`hour`, '14:00:00') > 0;
+
+/* QUERY 6 */
+SELECT * 
+FROM `degrees` 
+WHERE `level` LIKE 'magistrale';
