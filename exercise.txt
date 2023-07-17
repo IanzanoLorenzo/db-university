@@ -32,3 +32,7 @@ WHERE `level` LIKE 'magistrale';
 SELECT COUNT(*) AS `n_dipartimenti`
 FROM `departments`;
 
+/* QUERY 8 */
+SELECT * 
+FROM `teachers`
+WHERE `phone` IS NULL;
