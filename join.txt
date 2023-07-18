@@ -22,3 +22,10 @@ SELECT `courses`.*
 FROM `courses`
 JOIN `course_teacher` ON `course_teacher`.`course_id`=`courses`.`id`
 WHERE `course_teacher`.`teacher_id` = 44;
+
+/* QUERY 4 */
+SELECT `students`.`surname`, `students`.`name`, `degrees`.`id`,`degrees`.`name`, `departments`.`id`, `departments`.`name`
+FROM `students`
+JOIN `degrees` ON `students`.`degree_id`=`degrees`.`id`
+JOIN `departments` ON `degrees`.`department_id`=`departments`.`id`
+ORDER BY `students`.`surname`, `students`.`name`;
