@@ -3,3 +3,10 @@ SELECT `students`.*
 FROM `students`
 JOIN `degrees` ON `degrees`.`id`=`students`.`degree_id`
 WHERE `degrees`.`name` LIKE 'Corso di Laurea in Economia';
+
+
+/* QUERY 2 */
+SELECT `degrees`.* 
+FROM `degrees` 
+JOIN `departments` ON `degrees`.`department_id`=`departments`.`id`
+WHERE `departments`.`name` LIKE 'Dipartimento Di Neuroscienze' AND `degrees`.`level` LIKE 'magistrale';
