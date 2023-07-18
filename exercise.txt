@@ -3,6 +3,14 @@ SELECT *
 FROM `students` 
 WHERE `date_of_birth` BETWEEN '1990-01-01' AND '1990-12-31';
 
+SELECT * 
+FROM `students` 
+WHERE `date_of_birth` LIKE '1990-%';
+
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) LIKE 1990;
+
 /* QUERY 2 */
 SELECT * 
 FROM `courses` 
@@ -21,7 +29,11 @@ WHERE `period` LIKE 'I semestre' AND `year` LIKE 1;
 /* QUERY 5 */
 SELECT * 
 FROM `exams` 
-WHERE `date` LIKE '2020-06-20' AND TIMEDIFF(`hour`, '14:00:00') > 0;
+WHERE `date` LIKE '2020-06-20' AND TIMEDIFF(`hour`, '14:00:00') >= 0;
+
+SELECT * 
+FROM `exams` 
+WHERE `date` LIKE '2020-06-20' AND `hour` >= '14:00:00';
 
 /* QUERY 6 */
 SELECT * 
