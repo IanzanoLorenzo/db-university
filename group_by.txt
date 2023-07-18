@@ -12,3 +12,8 @@ GROUP BY `office_address`;
 SELECT `exam_id`, ROUND(AVG(`vote`)) AS `media_esame` 
 FROM `exam_student`
 GROUP BY `exam_id`;
+
+/* QUERY 4 */
+SELECT COUNT(`id`) AS ` n_corsi_di_laurea`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
